@@ -7,39 +7,39 @@ Use this to add functionality to autocomplete register post type, taxonomy in sh
 __( $SELECTION$, '$textdomain$' );
 ```
 
-2. aa - Add action hook
+2. **aa** - Add action hook
 ```php
 add_action( '$hook$', '$callback$' );
 ```
 
-3. aafu - Add action with function
+3. **aafu** - Add action with function
 ```php
 add_action( '$hook$', function () {
 	//your code
 } );
 ```
 
-4. aam - Add Action with method
+4. **aam** - Add Action with method
 ```php
 add_action( '$hook$', array( $class$, '$method$' ) );
 ```
 
-5. af - Add Filter
+5. **af** - Add Filter
 ```php
 add_filter( '$hook$', '$callback$' );
 ```
 
-6. afm - Add Filter with method
+6. **afm** - Add Filter with method
 ```php
 add_filter( '$hook$', array( $class$, '$method$' ) );
 ```
 
-7. ea - Escapte Attribute
+7. **ea** - Escapte Attribute
 ```php
 esc_attr( $SELECTION$ );
 ```
 
-8. ip - Insert Post
+8. **ip** - Insert Post
 ```php
 // Create post object
 $my_post = array(
@@ -52,14 +52,14 @@ $my_post = array(
 wp_insert_post( $my_post );
 ```
 
-9. rpt - Register Post Type: Shows same as in sublime text. Since its huge so below is just a sample. When you use it. It will be in full just like in sublime.
+9. **rpt** - Register Post Type: Shows same as in sublime text. Since its huge so below is just a sample. When you use it. It will be in full just like in sublime.
 ```php
 function prefix_register_name() {
 	$labels = array();
 }
 ```
 
-10. rt - Register Taxonomy: Shows same as in sublime text. Since its huge so below is just a sample. When you use it. It will be in full just like in sublime.
+10. **rt** - Register Taxonomy: Shows same as in sublime text. Since its huge so below is just a sample. When you use it. It will be in full just like in sublime.
 ```php
 function my_taxonomies_name() {
 
@@ -76,7 +76,7 @@ function my_taxonomies_name() {
 }
 ```
 
-11. wpa - wp_parse_args
+11. **wpa** - wp_parse_args
 ```php
 $$$args$ = wp_parse_args( $$$source$, array(
 	$key$ => $value$,
