@@ -1,2 +1,14 @@
-# wordpress-live-template
-Live Templates for phpStorm for pulling similar short auto-completes like in sublime. For pulling custom post type functions, taxonomies etc
+# PHPStorm WP live template
+Use this to add functionality to autocomplete register post type, taxonomy in short way like how we do in sublime.
+
+# Available shortcuts
+1. __
+Translate String
+
+2. aa
+add_action( 'your_hook', 'your_callback' );
+
+3. aafu
+add_action( 'hook', function () {
+
+} );

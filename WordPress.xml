@@ -1,0 +1,107 @@
+<templateSet group="WordPress">
+  <template name="aa" value="add_action( '$hook$', '$callback$' );&#10;$END$" description="add_action" toReformat="false" toShortenFQNames="true">
+    <variable name="hook" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="callback" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="HAML" value="false" />
+      <option name="JSP" value="false" />
+      <option name="PHP" value="true" />
+      <option name="SQL" value="false" />
+    </context>
+  </template>
+  <template name="aam" value="add_action( '$hook$', array( $class$, '$method$' ) );$END$" description="add_action &gt; method" toReformat="false" toShortenFQNames="true">
+    <variable name="hook" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="class" expression="&quot;$this&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="method" expression="hook" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="HAML" value="false" />
+      <option name="JSP" value="false" />
+      <option name="PHP" value="true" />
+      <option name="SQL" value="false" />
+    </context>
+  </template>
+  <template name="afm" value="add_filter( '$hook$', array( $class$, '$method$' ) );$END$" description="add_filter &gt; method" toReformat="false" toShortenFQNames="true">
+    <variable name="hook" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="class" expression="&quot;$this&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="method" expression="hook" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="HAML" value="false" />
+      <option name="JSP" value="false" />
+      <option name="PHP" value="true" />
+      <option name="SQL" value="false" />
+    </context>
+  </template>
+  <template name="ea" value="esc_attr( $SELECTION$ )" description="esc_attr" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="true" />
+      <option name="JSP" value="false" />
+      <option name="PHP" value="true" />
+      <option name="SQL" value="false" />
+    </context>
+  </template>
+  <template name="wpa" value="$$$args$ = wp_parse_args( $$$source$, array(&#10;&#9;$key$ =&gt; $value$,&#10;) );" description="wp_parse_args" toReformat="true" toShortenFQNames="true">
+    <variable name="args" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="source" expression="args" defaultValue="" alwaysStopAt="true" />
+    <variable name="key" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="HAML" value="false" />
+      <option name="JSP" value="false" />
+      <option name="PHP" value="true" />
+      <option name="SQL" value="false" />
+    </context>
+  </template>
+  <template name="af" value="add_filter( '$hook$', '$callback$' );&#10;$END$" description="add_filter" toReformat="false" toShortenFQNames="true">
+    <variable name="hook" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="callback" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="HAML" value="false" />
+      <option name="JSP" value="false" />
+      <option name="PHP" value="true" />
+      <option name="SQL" value="false" />
+    </context>
+  </template>
+  <template name="__" value="__( $SELECTION$, '$textdomain$' )" description="__" toReformat="false" toShortenFQNames="true">
+    <variable name="textdomain" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="true" />
+      <option name="JSP" value="false" />
+      <option name="PHP" value="true" />
+      <option name="SQL" value="false" />
+    </context>
+  </template>
+  <template name="aafu" value="add_action( '$hook$', function () {&#10;&#9;$END$&#10;} );" description="add_action &gt; closure" toReformat="false" toShortenFQNames="true">
+    <variable name="hook" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="HAML" value="false" />
+      <option name="JSP" value="false" />
+      <option name="PHP" value="true" />
+      <option name="SQL" value="false" />
+    </context>
+  </template>
+  <template name="rpt" value="/**&#10; * Registers a new post type&#10; * @uses $wp_post_types Inserts new post type object into the list&#10; *&#10; * @param string  Post type key, must not exceed 20 characters&#10; * @param array|string  See optional args description above.&#10; * @return object|WP_Error the registered post type object, or an error object&#10; */&#10;function prefix_register_name() {&#10;&#10;&#9;$labels = array(&#10;&#9;&#9;'name'               =&gt; __( 'Plural Name', 'text-domain' ),&#10;&#9;&#9;'singular_name'      =&gt; __( 'Singular Name', 'text-domain' ),&#10;&#9;&#9;'add_new'            =&gt; _x( 'Add New Singular Name', 'text-domain', 'text-domain' ),&#10;&#9;&#9;'add_new_item'       =&gt; __( 'Add New Singular Name', 'text-domain' ),&#10;&#9;&#9;'edit_item'          =&gt; __( 'Edit Singular Name', 'text-domain' ),&#10;&#9;&#9;'new_item'           =&gt; __( 'New Singular Name', 'text-domain' ),&#10;&#9;&#9;'view_item'          =&gt; __( 'View Singular Name', 'text-domain' ),&#10;&#9;&#9;'search_items'       =&gt; __( 'Search Plural Name', 'text-domain' ),&#10;&#9;&#9;'not_found'          =&gt; __( 'No Plural Name found', 'text-domain' ),&#10;&#9;&#9;'not_found_in_trash' =&gt; __( 'No Plural Name found in Trash', 'text-domain' ),&#10;&#9;&#9;'parent_item_colon'  =&gt; __( 'Parent Singular Name:', 'text-domain' ),&#10;&#9;&#9;'menu_name'          =&gt; __( 'Plural Name', 'text-domain' ),&#10;&#9;);&#10;&#10;&#9;$args = array(&#10;&#9;&#9;'labels'              =&gt; $labels,&#10;&#9;&#9;'hierarchical'        =&gt; false,&#10;&#9;&#9;'description'         =&gt; 'description',&#10;&#9;&#9;'taxonomies'          =&gt; array(),&#10;&#9;&#9;'public'              =&gt; true,&#10;&#9;&#9;'show_ui'             =&gt; true,&#10;&#9;&#9;'show_in_menu'        =&gt; true,&#10;&#9;&#9;'show_in_admin_bar'   =&gt; true,&#10;&#9;&#9;'menu_position'       =&gt; null,&#10;&#9;&#9;'menu_icon'           =&gt; null,&#10;&#9;&#9;'show_in_nav_menus'   =&gt; true,&#10;&#9;&#9;'publicly_queryable'  =&gt; true,&#10;&#9;&#9;'exclude_from_search' =&gt; false,&#10;&#9;&#9;'has_archive'         =&gt; true,&#10;&#9;&#9;'query_var'           =&gt; true,&#10;&#9;&#9;'can_export'          =&gt; true,&#10;&#9;&#9;'rewrite'             =&gt; true,&#10;&#9;&#9;'capability_type'     =&gt; 'post',&#10;&#9;&#9;'supports'            =&gt; array(&#10;&#9;&#9;&#9;'title',&#10;&#9;&#9;&#9;'editor',&#10;&#9;&#9;&#9;'author',&#10;&#9;&#9;&#9;'thumbnail',&#10;&#9;&#9;&#9;'excerpt',&#10;&#9;&#9;&#9;'custom-fields',&#10;&#9;&#9;&#9;'trackbacks',&#10;&#9;&#9;&#9;'comments',&#10;&#9;&#9;&#9;'revisions',&#10;&#9;&#9;&#9;'page-attributes',&#10;&#9;&#9;&#9;'post-formats',&#10;&#9;&#9;),&#10;&#9;);&#10;&#10;&#9;register_post_type( 'slug', $args );&#10;}&#10;&#10;add_action( 'init', 'prefix_register_name' );&#10;$END$" description="register_post_type" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="rt" value="/**&#10; * Create a taxonomy&#10; *&#10; * @uses  Inserts new taxonomy object into the list&#10; * @uses  Adds query vars&#10; *&#10; * @param string  Name of taxonomy object&#10; * @param array|string  Name of the object type for the taxonomy object.&#10; * @param array|string  Taxonomy arguments&#10; * @return null|WP_Error WP_Error if errors, otherwise null.&#10; */&#10;function my_taxonomies_name() {&#10;&#10;&#9;$labels = array(&#10;&#9;&#9;'name'                  =&gt; _x( 'Plural Name', 'Taxonomy plural name', 'text-domain' ),&#10;&#9;&#9;'singular_name'         =&gt; _x( 'Singular Name', 'Taxonomy singular name', 'text-domain' ),&#10;&#9;&#9;'search_items'          =&gt; __( 'Search Plural Name', 'text-domain' ),&#10;&#9;&#9;'popular_items'         =&gt; __( 'Popular Plural Name', 'text-domain' ),&#10;&#9;&#9;'all_items'             =&gt; __( 'All Plural Name', 'text-domain' ),&#10;&#9;&#9;'parent_item'           =&gt; __( 'Parent Singular Name', 'text-domain' ),&#10;&#9;&#9;'parent_item_colon'     =&gt; __( 'Parent Singular Name', 'text-domain' ),&#10;&#9;&#9;'edit_item'             =&gt; __( 'Edit Singular Name', 'text-domain' ),&#10;&#9;&#9;'update_item'           =&gt; __( 'Update Singular Name', 'text-domain' ),&#10;&#9;&#9;'add_new_item'          =&gt; __( 'Add New Singular Name', 'text-domain' ),&#10;&#9;&#9;'new_item_name'         =&gt; __( 'New Singular Name Name', 'text-domain' ),&#10;&#9;&#9;'add_or_remove_items'   =&gt; __( 'Add or remove Plural Name', 'text-domain' ),&#10;&#9;&#9;'choose_from_most_used' =&gt; __( 'Choose from most used Plural Name', 'text-domain' ),&#10;&#9;&#9;'menu_name'             =&gt; __( 'Singular Name', 'text-domain' ),&#10;&#9;);&#10;&#10;&#9;$args = array(&#10;&#9;&#9;'labels'            =&gt; $labels,&#10;&#9;&#9;'public'            =&gt; true,&#10;&#9;&#9;'show_in_nav_menus' =&gt; true,&#10;&#9;&#9;'show_admin_column' =&gt; false,&#10;&#9;&#9;'hierarchical'      =&gt; false,&#10;&#9;&#9;'show_tagcloud'     =&gt; true,&#10;&#9;&#9;'show_ui'           =&gt; true,&#10;&#9;&#9;'query_var'         =&gt; true,&#10;&#9;&#9;'rewrite'           =&gt; true,&#10;&#9;&#9;'query_var'         =&gt; true,&#10;&#9;&#9;'capabilities'      =&gt; array(),&#10;&#9;);&#10;&#10;&#9;register_taxonomy( 'taxonomy-slug', array( 'post' ), $args );&#10;}&#10;&#10;add_action( 'init', 'my_taxonomies_name' );" description="register_taxonomy" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="ip" value="// Create post object&#10;$my_post = array(&#10;  'post_title'    =&gt; '',&#10;  'post_content'  =&gt; '',&#10;  'post_status'   =&gt; 'publish',&#10;);&#10; &#10;// Insert the post into the database&#10;wp_insert_post( $my_post );" description="wp_insert_post" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>
