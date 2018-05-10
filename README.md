@@ -1,5 +1,5 @@
 # PHPStorm WP live template
-Use this to add functionality to autocomplete register post type, taxonomy in short way like how we do in sublime.
+Use this to add functionality to autocomplete register post type, taxonomy in short way like how we do in sublime text 3. Currently only contains 11 autocomplete. Suggest for more if you need. I'll gladly add them.
 
 # Available shortcuts
 1. __ - Transalation
